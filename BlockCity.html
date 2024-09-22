@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlockCity Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #coin {
+            width: 100px;
+            cursor: pointer;
+        }
+        .stats {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to BlockCity!</h1>
+    <img id="coin" src="path_to_your_coin_image.png" alt="Click me">
+    <div class="stats">
+        <p>Clicks: <span id="clickCount">0</span></p>
+        <p>Coins: <span id="coinCount">0</span></p>
+        <p>Level: <span id="level">1</span></p>
+    </div>
+    <script>
+        let clickCount = 0;
+        let coinCount = 0;
+        let level = 1;
+
+        document.getElementById('coin').addEventListener('click', () => {
+            clickCount++;
+            coinCount += 1;  // Change this logic as per your game
+            document.getElementById('clickCount').textContent = clickCount;
+            document.getElementById('coinCount').textContent = coinCount;
+
+            if (clickCount % 10 === 0) {
+                level++;
+                document.getElementById('level').textContent = level;
+            }
+        });
+    </script>
+</body>
+</html>
