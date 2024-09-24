@@ -1,0 +1,10 @@
+{
+    "name": "blockcity",
+    "version": "1.0.0",
+    "main": "index.html",
+    "script":{
+        "start": "server ."
+    },
+    "devDependencies": {
+    }
+}
